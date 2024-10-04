@@ -1,20 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CustomerListComponent } from './customer-list/customer-list.component';
-import { HeaderComponent } from './header/header.component';
-import customersDatas from '../customerData.json';
+import { HeaderComponent } from './components/header/header.component';
+import { CustomerListComponent } from './components/customer/customer-list/customer-list.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CustomerListComponent, HeaderComponent],
+  imports: [RouterOutlet, CustomerListComponent, HeaderComponent, CustomerListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  customers = customersDatas;
   title = 'CRM2i';
-  mail1 = 'f.lacaste@veolia.fr';
-  mail2 = 'guiadra@enedis.fr';
-  mail3 = 'hulk@marvel.com';
+
 }

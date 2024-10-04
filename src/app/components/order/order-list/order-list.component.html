@@ -1,0 +1,28 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Service Type</th>
+            <th scope="col">TVA</th>
+            <th scope="col">Customer</th>
+            <th scope="col">Nb Days</th>
+            <th scope="col">Total Ex Tax</th>
+            <th scope="col">State</th>
+            <th scope="col">Comment</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(order of orders$; track order.id) {
+        <tr>
+            <th scope="row">{{order.id}}</th>
+            <td>{{order.service_type}}</td>
+            <td>{{order.tva}}</td>
+            <td>{{order.customer.id}}</td>
+            <td>{{order.nb_days}}</td>
+            <td>{{order.total_exclude_tax}}</td>
+            <td>{{order.state}}</td>
+            <td>{{order.comment}}</td>
+        </tr>
+        }
+    </tbody>
+</table>
