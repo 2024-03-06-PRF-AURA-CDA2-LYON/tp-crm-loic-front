@@ -1,8 +1,8 @@
 import id from '@angular/common/locales/id';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CustomerService } from '../customer/customer.service';
-import { Customer } from '../customer/customer.type';
+import { CustomerService } from '../customer.service';
+import { Customer } from '../customer.type';
 
 @Component({
   selector: 'app-customer-form',
